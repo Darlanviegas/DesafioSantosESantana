@@ -1,0 +1,63 @@
+﻿@model IEnumerable<TestePlan.Darlan.Models.Cliente>
+
+@{
+    ViewBag.Title = "Cadastrados";
+}
+
+<h2>Cadastrados</h2>
+
+<p>
+    @Html.ActionLink("Criar novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DocumentoCNPJ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DocumentoCPF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataCadastro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Inativo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DocumentoCNPJ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DocumentoCPF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataCadastro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Inativo)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.IDCliente }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.IDCliente }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.IDCliente })
+        </td>
+    </tr>
+}
+
+</table>

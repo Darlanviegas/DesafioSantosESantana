@@ -1,0 +1,72 @@
+﻿@model TestePlan.Darlan.Models.Cliente
+
+@{
+    ViewBag.Title = "Deletar";
+}
+
+<h2>Deletar</h2>
+
+<h3>Tem certeza que desejar deletar?</h3>
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DocumentoCNPJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DocumentoCNPJ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DocumentoCPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DocumentoCPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataCadastro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataCadastro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inativo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Ir para lista", "Index")
+        </div>
+    }
+</div>

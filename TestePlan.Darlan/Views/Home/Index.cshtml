@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Desafio Santos & Santana</h1>
+    <p class="lead">Teste realizado usando ASP.NET MVC5, Entity Framework BootStrap 3 e SQL Server.</p>
+    <p><a href="https://www.santosesantana.com.br/" target="_blank" class="btn btn-danger btn-lg">Conheça o Desafiante &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Enunciado</h2>
+        <p>
+            Uma empresa contratou seus serviços e necessita que um sistema web seja desenvolvido para que ela consiga cadastrar e visualizar todos os seus clientes.
+            Os dados necessários para o cadastro do cliente são os seguintes:
+            Nome; Tipo (PF / PJ); Documento (CNPJ / CPF); Data do Cadastro; Telefone.
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Regras</h2>
+        <p>
+            Todos os campos são obrigatórios.
+            O campo documento deve ter máscara e validação de acordo com o Tipo, ou seja, se no momento do cadastro o tipo selecionado for PF, o documento deve ter a máscara e validação de CPF, se o tipo selecionado for PJ o documento deve ter a máscara e validação de CNPJ.
+            A validação deve ser feita tanto no frontend quanto no backend.
+            Na listagem de clientes deve ser possível filtrar os clientes por Nome e Documento.
+            Deverá ser possível editar e remover os clientes cadastrados, no caso da remoção, deverá ser feito um soft delete..
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Observações</h2>
+        <p>
+            O site deverá ser desenvolvido com os seguintes componentes:
+            ASP.NET MVC 5 (.NET Framework)
+            Entity Framework
+            Bootstrap 3
+            SQL Server.
+        </p>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+﻿@model TestePlan.Darlan.Models.Cliente
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DocumentoCNPJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DocumentoCNPJ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DocumentoCPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DocumentoCPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataCadastro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataCadastro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inativo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.IDCliente }) |
+    @Html.ActionLink("Ir para Lista", "Index")
+</p>
