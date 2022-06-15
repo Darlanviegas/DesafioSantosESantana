@@ -57,7 +57,7 @@ namespace TestePlan.Darlan.Controllers
             {
                 if (!cliente.ValidarDocumento())
                 {
-                    //TO DO: Introduzir interpolação de String para printar lista.
+                   
                     ViewBag.Mensagem = cliente.MensagemErro.FirstOrDefault();
                     return View(cliente);
                 }
@@ -69,24 +69,19 @@ namespace TestePlan.Darlan.Controllers
             if (cliente.TipoCliente == TipoCliente.PessoaJuridica)
             {
                 if (!cliente.ValidarDocumento())
-                {
-                    //TO DO: Introduzir interpolação de String para printar lista.
+                {                   
                     ViewBag.Mensagem = cliente.MensagemErro.FirstOrDefault();
                     return View(cliente);
-                }
-                // 
+                }                 
                 mappercliente = MapperTemp.MapeamentoView_EntidadeCliente(cliente);
 
             }
-
-
             // Validação de CPF
             db.Clientes.Add(mappercliente);
             db.SaveChanges();
             return RedirectToAction("Index");
             
         }
-
 
         // GET: Clientes/Edit/5
         public ActionResult Edit(int? id)

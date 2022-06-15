@@ -39,7 +39,7 @@ namespace TestePlan.Darlan.Controllers
         }
 
         [HttpPost]
-        public ActionResult xxCadastroCliente([Bind(Include = "Nome,DocumentoCNPJ")] Cliente movie)
+        public ActionResult xxCadastroCliente([Bind(Include = "Nome,Documento")] Cliente movie)
         {
             if (ModelState.IsValid)
             {

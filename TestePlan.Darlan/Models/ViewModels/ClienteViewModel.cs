@@ -9,9 +9,9 @@ namespace TestePlan.Darlan.Models.ViewModels
 {
     public class ClienteViewModel
     {
-     /// <summary>
-     /// id do cliente
-     /// </summary>
+        /// <summary>
+        /// id do cliente
+        /// </summary>
         public int IDCliente { get; set; }
 
         /// <summary>
@@ -49,8 +49,16 @@ namespace TestePlan.Darlan.Models.ViewModels
         /// <returns>retorna se é um numero de documento valido</returns>
         public bool ValidarDocumento()
         {
-            ValidarDocumentoCNPJ();
-            ValidarDocumentoCPF();
+            if (this.TipoCliente == TipoCliente.PessoaFisica)
+            {
+                ValidarDocumentoCPF();
+            }
+
+            if (this.TipoCliente == TipoCliente.PessoaJuridica)
+            {
+                ValidarDocumentoCNPJ();
+            }
+
             if (MensagemErro.Any())
             {
                 return false;
@@ -73,7 +81,7 @@ namespace TestePlan.Darlan.Models.ViewModels
             {
                 MensagemErro.Add("Para inserir um CPF é necessário ser tipo pessoa física.");
             }
-            if (!CpfCnpjUtils.IsValidCNPJ(this.Documento))
+            if (!CpfCnpjUtils.IsValidCPF(this.Documento))
             {
                 MensagemErro.Add("Numero de Documento Inválido");
             }

@@ -8,9 +8,9 @@ namespace TestePlan.Darlan.Models
 {
     public enum TipoCliente
     {
-       [Description("Pessoa Jurídica")]
+       [Description("Pessoa Juridica")]
         PessoaJuridica,
-       [Description("Pessoa Física")]
+       [Description("Pessoa Fisica")]
         PessoaFisica
     }
 }

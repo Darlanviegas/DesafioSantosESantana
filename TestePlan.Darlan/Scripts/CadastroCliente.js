@@ -12,8 +12,7 @@ function ValorInicialpagina() {
 
 }
 
-$('#TipoCliente').on('change', function () {
-    alert(this.value);
+$('#TipoCliente').on('change', function () {    
     $("#Documento").val("");
     this.value == 1 ? $("#Documento").mask("000.000.000-00") : $("#Documento").mask("00.000.000/0001-00");
     
